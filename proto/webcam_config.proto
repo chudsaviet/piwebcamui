@@ -1,0 +1,10 @@
+syntax = "proto3";
+package piwebcamui;
+
+option go_package = "build/gen/proto";
+
+message WebcamConfig {
+  uint32 input_res_x = 1;
+  uint32 input_res_y = 2;
+  float input_fps = 3;  // Float because we have to support FPS values like 29.97 .
+}
